@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "f94abc63-e82b-4547-8daa-7df562a2139a",
+		"name": "website-reader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "513031"
+	},
+	"item": [
+		{
+			"name": "read-website",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sessionId",
+						"value": "{{sessionId}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    \"https://phet-dev.colorado.edu/html/build-an-atom/0.0.0-3/simple-text-only-test-page.html\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/websites/readingSites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"websites",
+						"readingSites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-website 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sessionId",
+						"value": "{{sessionId}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    \"https://www.msn.com/en-nz/health/other/queen-elizabeth-s-10-daily-habits-that-helped-her-live-96-years/ar-AA11EmVv?ocid=hpmsn&cvid=4ac35602878e4b30bacb92bc690cc71c&ei=18\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/websites/readingSites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"websites",
+						"readingSites"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

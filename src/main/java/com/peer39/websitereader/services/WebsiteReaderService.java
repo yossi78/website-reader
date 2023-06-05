@@ -1,4 +1,5 @@
 package com.peer39.websitereader.services;
+import com.peer39.websitereader.utils.StringUtil;
 import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,14 +56,15 @@ public class WebsiteReaderService {
 
 
     private String clearWebText(String text){
-        text = text.replaceAll("<[^>]*>", "");
-        text = text.replaceAll("[\r\n]+", "\n");
-        text = text.replaceAll("[\n]+", "\n");
-        text = text.replaceAll("\t", "");
-        text = text.replaceAll("\\s+", " ");
-        text = text.replaceFirst("^\\s+", "");
+        text = StringUtil.removeTags(text);
+        text = StringUtil.removeSpacesFromBegining(text);
+        text = StringUtil.replaceNewLinesWithSpace(text);
+        text = StringUtil.replaceSpacesWithSingleOne(text);
         return text;
     }
+
+
+
 
 
 

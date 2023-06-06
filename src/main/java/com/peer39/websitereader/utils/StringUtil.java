@@ -20,7 +20,7 @@ public class StringUtil {
         return str.replaceAll("[\r\n]+", " ");
     }
 
-    public static String replaceSpacesWithSingleOne(String str){
+    public static String replaceMultipleSpacesWithSingleOne(String str){
         return str.replaceAll("[ ]+", " ");
     }
 
